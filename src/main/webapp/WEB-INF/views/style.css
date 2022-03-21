@@ -1,0 +1,315 @@
+:root {
+    --main-text-color: #222222;
+    --meta-text-color: #6d6d6d;
+    --main-effect-color: rgb(0, 255, 255);
+}
+
+@font-face {
+    font-family: 'Jal_Onuel';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 초기화 */
+* { margin: 0; padding: 0; }
+a { color: var(--main-text-color); text-decoration: none; }
+ul { list-style: none;}
+
+/* 화면 너비 초기화, 중앙 정렬 */
+.header_section, .main_section, .recommend_section, .quote_section, .footer_section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em auto;
+    max-width: 1160px;
+}
+
+body {
+    padding-top: 75px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    z-index: 1;
+}
+
+.header_section {
+    display: flex;
+    align-items: baseline;
+}
+
+header h1 {
+    margin-right: 1.5em;
+    font-family: 'Jal_Onuel';
+    font-weight: lighter;
+    font-size: x-large;
+}
+
+.header_left, .contents_nav, .header_right, .signup_nav {    
+    display: flex;
+    align-items: baseline;
+}
+
+.contents_nav a:hover, .signup_nav a:hover {
+    color: var(--main-effect-color);
+} 
+
+.contents_nav li {
+    padding: 0.5em 2em;
+    font-size: large;
+}
+
+.header_search {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    margin-right: 1.5em;
+    border: 1px solid lightgray;
+    border-radius: 0.5em;
+}
+
+.header_search:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.header_search > input {
+    border: none;
+    margin-left: 0.5em;
+    background: none;
+}
+
+.header_search > input:focus {
+    outline: none;
+}
+
+.signup_nav li {
+    padding: 0 1em;
+    border-right: 1px solid lightgray;
+}
+.signup_nav li:last-child {
+    border: none;
+}
+
+/* 글쓰기 버튼 */
+#writing_btn {
+    font-size: medium;
+    color: white;
+    border-style: none;
+    border-radius: 0.5em;
+    margin-left: 2em;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    background-color: var(--main-effect-color);
+}
+
+#writing_btn:hover {
+    background-color: rgb(0, 200, 200);
+}
+
+/* 글쓰기 토글 */
+.edit_toggle {
+    display: none;
+    position: fixed;
+    top: 76px;
+    left: 73%;
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.edit_toggle.active {
+    display: block;
+}
+
+.edit_toggle li {
+    margin: 1em 0.5em;
+}
+
+.edit_toggle a {
+    padding: 0.5em 1em;
+}
+
+.edit_toggle a:hover {
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+}
+
+/* main 시작 */
+
+main {
+    margin-top: 2em;
+    margin-bottom: 10em;
+}
+
+.img_container {
+    width: 800px;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.main_img {
+    display: flex;
+    align-items: flex-end;
+    background-repeat: round;
+    background-size: contain;
+    background-blend-mode: darken;
+    width: 100%;
+    height: 100%;
+    transition:all 0.2s;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+/* 메인 이미지 변환 CSS */
+.main_img.bg00 { background-image: url(/images/bg00.png);}
+.main_img.bg01 { background-image: url(/images/bg01.png);}
+.main_img.bg02 { background-image: url(/images/bg02.png);}
+.main_img.bg03 { background-image: url(/images/bg03.png);}
+.main_img.bg04 { background-image: url(/images/bg04.png);}
+
+.main_img:hover {
+    transform: scale(1.02);
+    border-radius: inherit;
+}
+
+.main_img h3 {
+    font-size: xx-large;
+    color:white;
+}
+
+.img_caption {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.6);
+    padding: 2em 3em;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    overflow: initial;
+}
+
+.img_caption button {
+    color: white;
+    font-size: medium;
+    font-weight: 800;
+    padding: 12px 16px;
+    background-color:transparent;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img_caption button.active {
+    background-color: var(--main-effect-color);
+}
+
+
+/* 메인 - 랭킹보드 */
+.best_board {
+    width: 29%;
+    height: 540px;
+}
+
+.best_board h2 {
+    margin-bottom: 0.5em;
+}
+
+.best_board i {
+    font-size: 0.8em;
+    color: rgb(250, 236, 35);
+    text-shadow: 1px 1px 1px #222222;
+}
+
+.ranking_container {
+    background-color: rgb(241, 241, 241);
+    height: 500px;
+    border-radius: 1em;
+}
+
+.ranking {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding-top: 0.5em;    
+}
+
+
+.ranking li {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0.85em 2em 0.75em 0.5em;
+    border-bottom: 0.5px solid #cccccc;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ranking li:first-child {
+    font-weight: 800;
+}
+
+.ranking li.none {
+    font-weight: normal;
+}
+
+.ranking li:last-child {
+    border: none;
+}
+
+.ranking_list {
+    cursor: pointer;
+}
+
+.best_board p {
+    font-size: smaller;
+    padding: 0.1em 2em 0 0; 
+    color: var(--meta-text-color);
+    text-align: right;
+}
+
+/* footer */
+footer {
+    min-height: 10em;
+    background-color: lightgray;
+}
+
+.footer_section {
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.footer_top, .meta_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.5em 0;
+}
+
+.shortcut_nav{
+    display: flex;
+}
+
+.shortcut_nav li {
+    font-size: x-large;
+    padding: 0.5em 0.5em;
+}
+
+.shortcut_nav li:last-child {
+    padding-right: 0;
+}
+
+.footer_title {
+    font-family: 'Jal_Onuel';
+    font-size: x-large;
+}
+
+.meta_info {
+    color: var(--meta-text-color);
+}

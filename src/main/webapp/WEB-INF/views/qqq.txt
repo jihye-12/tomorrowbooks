@@ -1,0 +1,46 @@
+document.getElementById("email2").onblur=
+        function(){
+            if(document.getElementById("email2").value==null||document.getElementById("email2").value=="이메일"){
+    document.getElementById("email2").style.border='red 1px solid';
+    document.getElementById("select1").style.border='red 1px solid'; 
+            }
+           
+                }
+        document.getElementById("pass1").onblur=    
+        function(){
+         if(document.getElementById("pass1").value==null){
+            document.getElementById("pass1").style.border='red 1px solid';
+            
+                    }
+                   
+                        }   
+            document.getElementById("pass2").onblur=                  
+        function(){
+            if(document.getElementById("pass2").value==null){
+            document.getElementById("pass2").style.border='red 1px solid';
+                     
+                            }
+                           
+                                } 
+            document.getElementById("nick").onblur=         
+        function(){
+        if(document.getElementById("nick").value==null){
+        document.getElementById("nick").style.border='red 1px solid';
+                            
+                                    }
+                                   
+                                        }         
+        
+      /*   document.getElementById("email").onfocus=
+        function(){
+        if(document.getElementById("email2").getAttribute(border)==red){
+            document.getElementById("email2").style.border='red 1px solid';
+            document.getElementById("select1").style.border='red 1px solid'; 
+            }
+        document.getElementById("select1").onfocus=
+        function(){
+            document.getElementById("email2").style.border='red 1px solid';
+            document.getElementById("select1").style.border='red 1px solid'; 
+    }
+} */
+    }

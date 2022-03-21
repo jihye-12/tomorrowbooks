@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Source+Sans+Pro&display=swap');
+
+/* 이미지 */
+
+.container {
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+}
+
+.item{
+    /* background-color:rgb(179, 179, 230); */
+ 
+}
+
+.item:nth-child(odd){
+    /* background-color:aquamarine */
+}
+
+.profile{
+    margin: 5px 0px 0px 50px;
+    float: left;
+    width: 50px;
+    border-radius: 70%;
+}
+
+.profile:hover{
+    cursor: pointer;
+    border: 0.5px solid rgb(255, 255, 255) !important;
+}
+
+.book{
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 5px 40px 30px 40px;
+}
+
+.book:hover{
+    cursor: pointer;
+}
+.id{
+    font-size: 20px;
+    font-family: 'Do Hyeon';
+    line-height: 90px;
+    height: 60px;
+    margin-left: 115px;
+}
+
+.id:hover{
+    cursor: pointer;
+    text-decoration-line:underline;
+    text-underline-position: under;
+}
+
+.text{
+    word-wrap: break-word;
+    /* background-color: red; */
+    font-size: 20px;
+    font-family: 'Do Hyeon';
+    max-width: 380px;
+    margin: 0px 0px 20px 50px;
+}
+
+/* drop */
+.drop{
+   
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 400px;
+    display: flex;
+}
+.dropdown1{
+    
+    padding-right: 40px;
+    padding-top: 10px;
+    position: absolute;
+}
+
+.dropdown1:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown2{
+    padding-right: 20px;
+    padding-top: 10px;
+    position: absolute;
+    left: 120px;
+}
+
+.dropdown2:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown3{
+    padding-right: 20px;
+    padding-top: 10px;
+    position: absolute;
+    left: 220px;
+}
+
+.dropdown3:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-select{
+     
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;    
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.1rem;
+    cursor : pointer;
+}
+
+.dropdown-list{
+    z-index: 2;
+    box-shadow : 4px 4px 10px rgb(128, 128, 128);
+    background-color: white;
+    border-radius: 7px;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown-list_item{
+    padding: 0.5rem;
+}
+
+.dropdown-list_item:hover {
+    border-radius: 7px;
+    background-color: rgb(206, 248, 234);
+}
+
+/* blog */
+.img{
+    width: 100%;
+}
+
+.img > img {
+    width: 100%;
+    max-height: initial;
+}
+
+/* postlist */
+
+#postlistbody{
+    width: 1100px;
+}
+
+.list{
+    background-color: rgb(235, 237, 250);
+    height: 40px;
+    margin: 0px 100px 0px 150px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.list span{
+    color: rgb(0, 0, 0);
+    font-family: 'Do Hyeon';
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.list1{
+    width: 10px;
+    position: absolute;
+    margin-left: 45px;
+    transform: translate(-50%, 0%)
+}
+.list2{
+    width: 500px;
+    text-align: left;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.list2:hover{
+    cursor: pointer;
+    text-decoration-line:underline;
+    text-underline-position: under;
+}
+
+.list3{
+    text-align: center;
+    width: 80px;
+   position: absolute;
+   left:750px;
+}
+.list4{
+    text-align: center;
+    width: 130px;
+    position: absolute;
+    left:920px;
+    transform: translate(-50%, 0%);
+}
+
+#title{
+    height: 50px;
+    margin: 10px 100px 0px 150px;
+    background: linear-gradient(#0F2027, #203A43, #2C5364);
+    border-radius: 10px;
+    display: flex;
+}
+
+#title ul{
+    /* background-color: red;  */
+    color: white;
+    font-family: 'Do Hyeon';
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+}
+
+#title1{
+   
+    
+}
+
+#title2{
+   
+    padding-left: 200px;
+    
+}
+
+#title3{
+
+    padding-left: 330px;
+}
+
+#title4{
+    padding-left: 80px;
+}
+
+#listnav{
+    margin: 40px 0px  0px 450px;
+}
+
+#post{
+    font-family: 'Do Hyeon';
+    font-size: 40px;
+    margin: 25px 10px 10px 160px;
+}
+
+#postimg{
+    width: 50px;
+    margin-bottom: 10px;
+}

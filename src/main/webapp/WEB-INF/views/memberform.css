@@ -1,0 +1,249 @@
+
+input{
+border-radius: 5px;
+}
+#header{
+    /* height:72px; */
+   
+    
+}
+#header_logo{
+    /* height:31px; */
+    /* width: 88px; */
+    text-align: center;
+    margin-top: 3em;
+    /* position: absolute; */
+    /* top:41px; */
+    
+}
+/* img{
+    display: block;
+    width:30.17px;
+    height: 30px;
+} */
+/* #logo1{
+    width:30.17px;
+    height: 30px;
+    background-color: aqua;
+    
+} */
+#pass3{
+    width:394px;
+    height: 50px;
+    display: block;
+    margin:0 auto;
+    padding:0px;
+    margin-top: 20px;
+    
+}
+#logobox{
+    height: 107px;
+    width:400px;
+    margin:30px 0;
+    padding: 0px 0px 30px;
+    }
+#logobox>p{
+    margin:15px 0px;
+    font-size:12px;
+    display:block;
+    
+    text-align: center;
+}
+
+#logo{
+    width:400px;
+    height: 49px;
+    padding:0px;
+    text-align: center;
+}
+#logo div{
+    width:48px;
+    height: 48px;
+    background-color: aqua;
+    display:inline-block;
+    margin : 0 7px;
+    
+    
+}
+img{
+    display: inline;
+}
+#email>h2{
+    margin :0px 0px 12px;
+}
+#aaa{
+    width:20px;
+    height:40px;
+    
+}
+#container{
+    width: 400px;
+    height:1234.38px;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 15px;
+}
+#email form{
+    margin: 0 auto;
+}
+
+#email2{
+    width:165px;
+    height:34px;
+    padding: 0px 15px;
+  
+    margin: 0px;
+    
+}
+#email select{
+    width:170px;
+    height:40px;
+   
+}
+#email1 {
+    width:400px;
+    height:50px;
+    margin: 10px 0px 0px;
+}
+#pass>h2{
+    width:360px;
+    height:21px;
+    margin: 20px 0px 12px;
+}
+
+#pass>.fon{
+    width:360px;
+    height:18.19px;
+    margin: 0px 0px 10px;
+    font-size: 13px;
+}
+#pass>input{
+    width:360px;
+    height:25px;
+    padding: 8px 15px 9px;
+    font-size: 15px;;
+}
+.rfont{
+    width: 400px;
+    height: 31px;
+}
+#name1>h2{
+    width:360px;
+    height: 21px;
+    margin: 20px 0px 12px
+}
+
+#name1>p{
+    width:360px;
+    height: 18.19px;
+    font-size: 13px;
+    margin: 0px 0px 10px;
+}
+
+#name1>input{
+    font-size: 15px;
+    width:360px;
+    height: 25px;
+    padding: 8px 15px 9px;
+}
+#nick1{
+    width:394px;
+    height: 50px;
+    display: block;
+    margin-top: 20px;
+}
+#agr>h2{
+    width:360px;
+    height: 21px;
+    margin: 20px 0px 12px;
+}
+/* #check{
+    border: 1px solid black;
+} */
+input[type=checkbox]
+#checkbox:nth-child(1){
+    
+    width:319px;
+    height: 70px;
+    padding:0px 6px 0px 0px
+}
+
+#check>p{
+    display:inline;
+    /* background-color: aqua; */
+}
+
+#check{
+    width:319px;
+    height: 70px;
+    padding:0px 6px 0px 0px;
+    
+}
+#check{
+    border : 1px solid black;
+
+    width:360px;
+    height: 300px;
+    padding:0px 23px 6px 16px
+}
+#asd{
+    background-color: aqua;
+}
+#check a{
+    color: black;
+}
+/* #check input{
+    background-color: aqua;
+} */
+#agr>input[type=button]{
+    width:400px;
+    height: 50px;
+    background-color: aqua;
+    padding: 11px 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight:bold;
+    border:none
+}
+
+
+#early>p{
+    text-align: center;
+}
+
+#check>p{
+    display: inline;
+}
+.fon2:nth-child(1){
+    width:360px;
+    height:70px;
+   line-height: 70px;
+    
+}
+.fon2:nth-child(2){
+    width:325px;
+    height:40px;
+}
+.fon2:nth-child(3){
+    width:325px;
+    height:40px;
+}
+.fon2:nth-child(4){
+    width:325px;
+    height:40px;
+}
+.fon2:nth-child(5){
+    width:325px;
+    height:40px;
+}
+#early>p>a{
+    color:black;
+}
+
+
