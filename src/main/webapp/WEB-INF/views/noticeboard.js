@@ -9,7 +9,7 @@ $('#text7').text('책을 사느라 들인 돈은 결코 손해가 아니다. 오
 $('#text8').text('책이란 넓디넓은 시간의 바다를 지나가는 배이다.');
 $('#text9').text('인생은 매우 짧고 그 중 조용한 시간은 얼마 안 되므로 그 시간을 가치없는 책을 읽는데 낭비하지 말아야 한다.');
 
-
+//
 
 function zoomIn(event) {
     event.target.style.transform = "scale(1.03)";
