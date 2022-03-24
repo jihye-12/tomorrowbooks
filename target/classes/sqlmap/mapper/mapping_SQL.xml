@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.campus.dao.FileDAO" >
+
+
+
+<!-- <insert id="saveImage" parameterType="java.util.Map"> -->
+<!-- 	INSERT INTO photo_table VALUES(#{img})	 -->
+<!-- </insert> -->
+
+<!-- <insert id="saveImage" parameterType="memberdto"> -->
+<!-- 	INSERT INTO photo_table VALUES(, #{name}, #{title}, #{description}, #{img})	 -->
+<!-- </insert> -->
+
+<insert id="saveImage" parameterType="java.util.Map">
+	INSERT INTO photo_table VALUES(null,#{name}, #{title}, #{description}, #{img})	
+</insert>
+
+<!-- <select id="getByteImage" resultType="filedto"> -->
+<!--     SELECT img -->
+<!--     FROM photo_table -->
+<!-- </select> -->
+
+<!-- <select id="getByteImages" resultType="java.util.Map"> -->
+<!--     SELECT img -->
+<!--     FROM photo_table -->
+<!-- </select> -->
+
+<select id="getByteImages" resultType="java.util.Map">
+    SELECT title, name, description, img
+    FROM photo_table
+</select>
+</mapper>
+
+
+
+
+
+
+
+
+

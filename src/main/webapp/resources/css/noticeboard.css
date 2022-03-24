@@ -40,12 +40,18 @@
 .book:hover{
     cursor: pointer;
 }
+.author {
+	margin-left: 65px;
+	color: darkgray;
+	margin-bottom: 0;
+}
+
 .id{
     font-size: 20px;
     font-family: 'Do Hyeon';
-    line-height: 90px;
-    height: 60px;
-    margin-left: 115px;
+/*     line-height: 90px; */
+/*     height: 60px; */
+	margin-left: 65px;
 }
 
 .id:hover{

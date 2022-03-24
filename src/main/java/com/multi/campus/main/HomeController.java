@@ -44,12 +44,7 @@ public class HomeController {
 	public void ihou() {
 		log.info(">>>>> ihou");
 	}
-	
-	@GetMapping("noticeboard")
-	public void noticeboard() {
-		log.info(">>>>> noticeboard");
-	}
-	
+
 	@GetMapping("uncom-conveni")
 	public void uncom_conveni() {
 		log.info(">>>>> uncom-conveni");

@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<form action="/saveImage" enctype="multipart/form-data" method="post"" accept-charset="UTF-8">
 <header>
         <section class="header_section">
             <nav class="header_left">
@@ -20,8 +21,8 @@
                 </h1>
             </nav>
             <nav class="header_right">
-                
-                <button id="writing_btn">올리기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+                <input type="hidden" name="name" value="${sessionScope.loginMemberInfo.name}"> 
+                <input type="submit" id="writing_btn" value="올리기">&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i>
             </nav>
         </section>
    	</header>
@@ -34,7 +35,6 @@
         </li>
     </ul>
 <main>
-<form action="">
   <div class="main-container">
     	<div class="temp-box" id="box1">
     		사진올리기
@@ -45,7 +45,7 @@
     		<div class="imgBox">
 				<div id="imgTag1"></div>
 				<label for="inputImg1">업로드</label>
-				<input type="file" id="inputImg1" name="outo" accept=".jpg,.png" style="position: absolute; bottom:0px; left: 63px; font-size: x-large;" onchange="loadFile(this)">
+				<input type="file" id="inputImg1" name="imgFile" accept=".jpg,.png" style="position: absolute; bottom:0px; left: 63px; font-size: x-large;" onchange="loadFile(this)">
 			</div>
     	</div>
     	
@@ -58,13 +58,13 @@
     			<option>만화</option>
     			<option>그림책</option>
     		</select>
-    		<input type="text" id="text1" placeholder="제목" style="width:80%; font-size:20px; "/><br>
-    		<textarea id="textarea1" cols="50" rows="10" placeholder="설명"></textarea><br>
+    		<input type="text" id="text1" name="title" placeholder="제목" style="width:80%; font-size:20px; "/><br>
+    		<textarea id="textarea1" name="description" cols="50" rows="10" placeholder="설명"></textarea><br>
     		<input type="button" id="add1" value="추가하기">
     	</div>
   </div>
-</form>
 </main>
+</form>
     <footer>
         <section class="footer_section">
             <section class="footer_top">

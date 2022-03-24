@@ -41,6 +41,7 @@
 
                 </div>
                 
+                   
                 <ul class="signup_nav">
                     	<!-- 컨트롤러에서 로그인시 생성한 세션을 체크한다.  -->
 						<c:choose>
@@ -121,70 +122,16 @@
 
     <!-- 이미지 정렬 -->
     <div class="container">
-        <div class="item">
-            <img class="profile" id="profile1"
-                src="https://i.pinimg.com/564x/a8/47/fd/a847fd5c3550086ed7d912aebe8126a8.jpg">
-            <p class="id" id="id1">2yujin22</p>
-            <img class="book" id="book1" src="https://i.pinimg.com/564x/30/2d/6d/302d6d42bf778f07d4f7e31f84bb538b.jpg"
+        <c:forEach var="result" items="${image}" varStatus="status">
+        	<div class="item">
+        		<p class="author" id="author${status.count}">글쓴이 : ${name[status.index]}</p>
+        		<p class="id" id="id${status.count}">제목 : ${title[status.index]}</p>
+        		<img class="book" id='book${status.count}' src="data:image/png;base64,${result}"
                 onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)" style="cursor: pointer;">
-            <p class="text" id="text1"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile2"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id2">Umie.haus</p>
-            <img class="book" id="book2" src="https://i.pinimg.com/736x/de/64/37/de64370f226e1980b6108556d58ec5c4.jpg">
-            <p class="text" id="text2"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile3"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id3">sat.12am</p>
-            <img class="book" id="book3" src="https://i.pinimg.com/564x/fa/0b/bf/fa0bbf521037b41955c31163b5102cf3.jpg">
-            <p class="text" id="text3"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile4"
-                src="https://i.pinimg.com/564x/ab/8a/fe/ab8afefecab288d300fcb466da602137.jpg">
-            <p class="id" id="id4">monda.ily</p>
-            <img class="book" id="book4" src="https://i.pinimg.com/564x/1f/6e/a0/1f6ea01870204bedfe689783c4bca7fa.jpg">
-            <p class="text" id="text4"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile5"
-                src="https://i.pinimg.com/736x/1d/c8/0c/1dc80c20df98ff2bf1267992624ad346.jpg">
-            <p class="id" id="id5">affel</p>
-            <img class="book" id="book5" src="https://i.pinimg.com/564x/91/3b/5b/913b5bac87225fe159e4b84ca6b42542.jpg">
-            <p class="text" id="text5"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile6"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id6">sinhye_ori</p>
-            <img class="book" id="book6" src="https://i.pinimg.com/564x/20/c3/ff/20c3ff84b3438b5d0cfb919d011a2c8b.jpg">
-            <p class="text" id="text6"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile7"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id7">be_Bright_</p>
-            <img class="book" id="book7" src="https://i.pinimg.com/564x/05/91/55/0591553335ef7ad08ce7a58616084071.jpg">
-            <p class="text" id="text7"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile8"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id8">dgd46</p>
-            <img class="book" id="book8" src="https://i.pinimg.com/564x/9b/9d/5e/9b9d5e8198d9ecee39614fd4d91dd982.jpg">
-            <p class="text" id="text8"></p>
-        </div>
-        <div class="item">
-            <img class="profile" id="profile9"
-                src="https://i.pinimg.com/564x/f9/d7/20/f9d72002169d6630715a6051208ef467.jpg">
-            <p class="id" id="id">sashgfn</p>
-            <img class="book" id="book9" src="https://i.pinimg.com/564x/fa/0b/bf/fa0bbf521037b41955c31163b5102cf3.jpg">
-            <p class="text" id="text9"></p>
-        </div>
+                <p class="text" id="text${status.count}">설명 : ${description[status.index]}</p>
+        	</div>
+
+		</c:forEach>
 
     </div>
 
