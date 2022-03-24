@@ -20,28 +20,32 @@
             </nav>
             <nav class="header_right">
                 
-                <button id="writing_btn">올리기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+                <button id="writing_btn" type="submit" form="test" >올리기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
+        
             </nav>
         </section>
    	</header>
    	<main>
-   		<form action="">
+   		<form action="membermybatisinsert" id="test"  method="post" >
   			<div class="main-container">
     			<div class="temp-box" id="box1">
 					리뷰글쓰기
     			</div>
     			<div class="temp-box" id="box2">
-    				<input type="text" id="register1" placeholder="등록인 이름"/>
+    				<input type="text" id="register1" name=name   value="${sessionScope.loginMemberInfo.name}" readonly/>
     				<span class="star1">
   						★★★★★
   						<span>★★★★★</span>
-  						<input type="range" id="range1" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
+  						<input type="range" name="range" id="range1" oninput="drawStar(this)" step="1" min="0" max="10">
 					</span>
-					<input type="text" id="title1" placeholder="제목"/>
-					<textarea id="conetent1" cols="50" rows="10" placeholder="설명"></textarea>
+					<input type="text" id="title1" name=title placeholder="제목"/>
+					<textarea name="text" id="conetent1" cols="50" rows="10" placeholder="설명"></textarea>
 					<input type="button" id="add1" value="책 추가하기"/>
+					
     			</div>
     		</div>
+   
+	
 		</form>
    	</main>
    		<footer>

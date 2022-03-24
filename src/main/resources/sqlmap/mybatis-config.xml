@@ -11,7 +11,7 @@
 	<typeAliases>
 		<typeAlias type="com.multi.campus.member.MemberDto" alias="memberDto" />
 		<typeAlias type="com.multi.campus.login.LoginDto" alias="loginDto" />
-		<!-- <typeAlias type="com.multi.campus.file.dto.FileDTO" alias="fileDTO" /> -->
+		<typeAlias type="com.multi.campus.review.ReviewDTO" alias="reviewdto" />
 	</typeAliases>
 
 	

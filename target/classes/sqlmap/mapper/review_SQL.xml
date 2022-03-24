@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.campus.dao.ReviewDAO" >
+
+<select id="reviewlist" resultType="reviewdto">
+ select * from review where length(title)>=1 order by date desc
+</select>
+
+<insert id="insertreview" parameterType="reviewdto">
+ insert into review values(#{name} ,#{title}, #{text}, DATE_FORMAT(CURDATE(), '%Y년 %m월 %d일'), #{range}/2, null)
+</insert>
+
+</mapper>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Source+Sans+Pro&display=swap');
 
-/* 이미지 */
+/* �씠誘몄� */
 
 .container {
     padding-top: 70px;
@@ -161,6 +161,7 @@
 }
 
 .list{
+	width:935px;
     background-color: rgb(235, 237, 250);
     height: 40px;
     margin: 0px 100px 0px 150px;
@@ -202,6 +203,7 @@
    position: absolute;
    left:750px;
 }
+
 .list4{
     text-align: center;
     width: 130px;
@@ -210,7 +212,16 @@
     transform: translate(-50%, 0%);
 }
 
+.list5{
+    text-align: center;
+    width: 130px;
+    position: absolute;
+    left:1037px;
+    transform: translate(-50%, 0%);
+}
+
 #title{
+	width:940px;
     height: 50px;
     margin: 10px 100px 0px 150px;
     background: linear-gradient(#0F2027, #203A43, #2C5364);
@@ -245,6 +256,10 @@
 
 #title4{
     padding-left: 80px;
+}
+
+#title5{
+    padding-left: 10px;
 }
 
 #listnav{

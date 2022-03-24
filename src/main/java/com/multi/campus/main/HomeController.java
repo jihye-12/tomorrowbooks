@@ -74,12 +74,7 @@ public class HomeController {
 	public void midnightlibrary() {
 		log.info(">>>>> midnightlibrary");
 	}
-	
-	@GetMapping("postlist")
-	public void postlist() {
-		log.info(">>>>> postlist");
-	}
-	
+		
 	@GetMapping("ihou10")
 	public void ihou10() {
 		log.info(">>>>> ihou10");
