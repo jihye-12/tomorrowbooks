@@ -24,10 +24,10 @@
             </h1>
             <ul class="contents_nav">
                 <li>
-                    <a href="/ihou.html">사진</a>
+                    <a href="/noticeboard">사진</a>
                 </li>
                 <li>
-                    <a href="/noticeboard.jsp">리뷰</a>
+                    <a href="/postlist">리뷰</a>
                 </li>        
             </ul>
         </nav>
@@ -39,16 +39,26 @@
             </div>
             
             <ul class="signup_nav">
-                <li>
-                    <a href="/loginform.jsp">로그인</a>
-                </li>
-                <li>
-                    <a href="/memberform.jsp">회원가입</a>
-                </li>
-                <li>
-                    <a href="/mypage.jsp">마이페이지</a>
-                </li>
-            </ul>
+                    	<!-- 컨트롤러에서 로그인시 생성한 세션을 체크한다.  -->
+						<c:choose>
+						    <c:when test="${sessionScope.loginMemberInfo eq null}">
+		                    <li>
+                        		<a href="/loginform">로그인</a>
+		                    </li>
+		                    <li>
+		                        <a href="/memberform">회원가입</a>
+		                    </li>
+						    </c:when>
+						    <c:otherwise>
+						    <li>
+                        		<a href="/logout">로그아웃</a>
+                        	</li>
+		                    <li>
+		                        <a href="/mypage">마이페이지</a>
+		                    </li>
+						    </c:otherwise>
+						</c:choose>
+                </ul>
             <button id="writing_btn">글쓰기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
         </nav>
     </section>

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
@@ -33,8 +34,9 @@ public class LoginController {
 	}
 	
 	@PostMapping("/selectLogin")
-	public void selectLogin(HttpServletResponse response, HttpSession session, LoginDto loginDto) {
-
+	public ModelAndView selectLogin(HttpServletResponse response, HttpSession session, LoginDto loginDto) {
+		ModelAndView mv = new ModelAndView();
+		boolean isLogin = false;
 		log.info(">>>>>>>>>>>>화면에서 넘어온 값");
 		log.info(">>>>>>>>>>>>loginDto" +loginDto.toString());
 		
@@ -48,7 +50,9 @@ public class LoginController {
 		
 		//일치하는 데이터가 있으면 로그인 성공
 		if(resultVo != null) {
-			
+			isLogin = true;
+			mv.addObject("isLogin", isLogin);
+			mv.setViewName("/loginform");
 			//세션에 회원정보를 담는다.
 			session.setAttribute("loginMemberInfo", resultVo);
 			
@@ -62,17 +66,22 @@ public class LoginController {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}else {
+			return mv;
+		} else {
+			isLogin = false;
+			mv.addObject("isLogin", isLogin);
+			mv.setViewName("/loginform");
 			//Controller에서 alert 발생 후 redirect 하는 방법
-			response.setContentType("text/html; charset=UTF-8");
-			PrintWriter out;
-			try {
-				out = response.getWriter();
-				out.println("<script>alert('회원정보를 찾을 수 없습니다.');  location.href='/loginform';</script>"); //ajax로 변환하기
-				out.flush();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//			response.setContentType("text/html; charset=UTF-8");
+//			PrintWriter out;
+//			try {
+//				out = response.getWriter();
+//				out.println("<script>alert('회원정보를 찾을 수 없습니다.');  location.href='/loginform';</script>"); //ajax로 변환하기
+//				out.flush();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+			return mv;
 		}
 	}
 	

@@ -460,18 +460,12 @@ footer {
     color: var(--meta-text-color);
 }
 
-  .box-container {
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    margin-left: 400px;
-    margin-right: 300px;
+.box-container {
+    margin: auto;
+    padding-top: 100px;
+    max-width: 1160px;
     height: 800px;
-    width: 1200px;
-    top: 100px;
-    left: 0;
-    right: 0;
-    display: inline-flex;
+    display: flex;
   }
 
   .box12 {
@@ -530,14 +524,13 @@ footer {
   }
 
   .heart-button {
-
     all: unset;
     width: 100px;
-    height: 30px;
+    height: 25px;
     background-color: #f5f5f5;
     text-align: center;
-    display:flexbox;
-    margin: 60px 2px 10px 11px;
+    display: flexbox;
+    margin: 45px 1px 10px 9px;
     padding: 11px 10px;
     border-radius: 5px;
   }
@@ -548,11 +541,11 @@ footer {
     border-radius: 50%;
     margin-left: 37px;
     margin-top: 25px;
-    /* border: 2px solid var(--color-light-white) */
+    border: 2px solid var(--color-light-white)
 }
 
 .name{
   font-style: inherit;
-  padding-left: 105px;
-  padding-top: 20px;
+  padding-left: 25%;
+  padding-top: 10px;
 }

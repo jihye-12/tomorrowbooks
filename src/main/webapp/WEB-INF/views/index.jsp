@@ -21,10 +21,10 @@
                 </h1>
                 <ul class="contents_nav">
                     <li>
-                        <a href="/ihou">사진</a>
+                        <a href="/noticeboard">사진</a>
                     </li>
                     <li>
-                        <a href="/noticeboard">리뷰</a>
+                        <a href="/postlist">리뷰</a>
                     </li>        
                 </ul>
             </nav>
@@ -89,9 +89,9 @@
                 <div class="ranking_container">
                     <ul class="ranking">
                         <!-- 나중에 백엔드에서 자바스크립트로 textContent로 접근 -->
-                        <li class="ranking_list"><a href="/ihou_copy_3">1. 불편한 편의점</a></li>
-                        <li class="ranking_list"><a href="/ihou_copy">2. 당신은 아무 잘못이 없다</a></li>
-                        <li class="ranking_list"><a href="/ihou_copy_2">3. 물고기는 존재하지 않는다</a></li>
+                        <li class="ranking_list">1. 불편한 편의점</li>
+                        <li class="ranking_list">2. 당신은 아무 잘못이 없다</li>
+                        <li class="ranking_list">3. 물고기는 존재하지 않는다</li>
                         <li class="ranking_list">4. 달러구트 꿈 백화점</li>
                         <li class="ranking_list">5. 센 강의 이름 모를 여인</li>
                         <li class="ranking_list">6. 미드나잇 라이브러리</li>

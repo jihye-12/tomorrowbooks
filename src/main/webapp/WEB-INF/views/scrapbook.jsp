@@ -6,11 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>내일의책</title>
-<link rel="stylesheet" href="css/scrapbook.css" />
+<link rel="stylesheet" href="/resources/css/scrapbook.css" />
 <script src="https://kit.fontawesome.com/6f8304097c.js" crossorigin="anonymous" defer></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="main.js" defer></script>
+<script src="/resources/js/jquery-3.6.0.min.js"></script>
+<script src="/resources/js/main.js" defer></script>
 
 </head>
 <body>
@@ -22,10 +21,10 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 </h1>
                 <ul class="contents_nav">
                     <li>
-                        <a href="/ihou.jsp">사진</a>
+                        <a href="/noticeboard">사진</a>
                     </li>
                     <li>
-                        <a href="/noticeboard.jsp">리뷰</a>
+                        <a href="/postlist">리뷰</a>
                     </li>        
                 </ul>
             </nav>
@@ -37,15 +36,25 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
                 </div>
                 
                 <ul class="signup_nav">
-                    <li>
-                        <a href="/loginform.jsp">로그인</a>
-                    </li>
-                    <li>
-                        <a href="/memberform.jsp">회원가입</a>
-                    </li>
-                    <li>
-                        <a href="/mypage.jsp">마이페이지</a>
-                    </li>
+                    	<!-- 컨트롤러에서 로그인시 생성한 세션을 체크한다.  -->
+						<c:choose>
+						    <c:when test="${sessionScope.loginMemberInfo eq null}">
+		                    <li>
+                        		<a href="/loginform">로그인</a>
+		                    </li>
+		                    <li>
+		                        <a href="/memberform">회원가입</a>
+		                    </li>
+						    </c:when>
+						    <c:otherwise>
+						    <li>
+                        		<a href="/logout">로그아웃</a>
+                        	</li>
+		                    <li>
+		                        <a href="/mypage">마이페이지</a>
+		                    </li>
+						    </c:otherwise>
+						</c:choose>
                 </ul>
                 <button id="writing_btn">글쓰기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
             </nav>
@@ -55,10 +64,10 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
     <!-- 글쓰기 버튼 클릭시 생성 -->
     <ul class="edit_toggle">
         <li>
-            <a href="/reviewphoto.jsp"><i class="fa-solid fa-camera"></i>&nbsp;&nbsp;사진 올리기</a>
+            <a href="/reviewphoto"><i class="fa-solid fa-camera"></i>&nbsp;&nbsp;사진 올리기</a>
         </li>
         <li>
-            <a href="/reviewwrite.jsp"><i class="fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;리뷰 글쓰기</a>
+            <a href="/reviewwrite"><i class="fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;리뷰 글쓰기</a>
         </li>
     </ul>
 
@@ -75,17 +84,17 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
 				<div class="menu">사진</div>			
 			</div>
 			<div id="photo">
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
-			<article><img class="imageEx" src="images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
+			<article><img class="imageEx" src="/resources/images/bg00.png"></article>
 		</div>
 		</div>
 	</main>
@@ -120,11 +129,11 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
 		    console.log("1 "+id);
 		    if(id == "select0"){
 		    	console.log("2 "+id);
-		    	$('.imageEx').attr('src', "images/bg00.png");
+		    	$('.imageEx').attr('src', "/resources/images/bg00.png");
 		    }
 		    else{
 		    	console.log("3 "+id);
-		    	$('.imageEx').attr('src', "images/bg01.png");
+		    	$('.imageEx').attr('src', "/resources/images/bg01.png");
 		    }
 		});
 	});

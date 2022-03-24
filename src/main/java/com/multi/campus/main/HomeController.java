@@ -1,9 +1,17 @@
 package com.multi.campus.main;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.multi.campus.login.LoginDto;
 
 @Controller
 
@@ -40,16 +48,6 @@ public class HomeController {
 	@GetMapping("noticeboard")
 	public void noticeboard() {
 		log.info(">>>>> noticeboard");
-	}
-	
-	@GetMapping("reviewphoto")
-	public void reviewphoto() {
-		log.info(">>>>> reviewphoto");
-	}
-	
-	@GetMapping("reviewwrite")
-	public void reviewwrite() {
-		log.info(">>>>> reviewwrite");
 	}
 	
 	@GetMapping("uncom-conveni")

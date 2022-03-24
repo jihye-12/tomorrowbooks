@@ -26,10 +26,10 @@
                 </h1>
                 <ul class="contents_nav">
                     <li>
-                        <a href="/ihou">사진</a>
+                        <a href="/noticeboard">사진</a>
                     </li>
                     <li>
-                        <a href="/noticeboard">리뷰</a>
+                        <a href="/postlist">리뷰</a>
                     </li>        
                 </ul>
             </nav>
@@ -52,12 +52,14 @@
 		                    </li>
 						    </c:when>
 						    <c:otherwise>
+						    <li>
                         		<a href="/logout">로그아웃</a>
+                        	</li>
+		                    <li>
+		                        <a href="/mypage">마이페이지</a>
+		                    </li>
 						    </c:otherwise>
 						</c:choose>
-                    <li>
-                        <a href="/mypage">마이페이지</a>
-                    </li>
                 </ul>
                 <button id="writing_btn">글쓰기&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></button>
             </nav>
@@ -75,13 +77,13 @@
     </ul>
 
     
-    </div>
+    
     <div class="box-container">
         <div class="box3">
             <img src="/resources/images/book8.jpg" alt="profile photo" class="profile-img">
             <div class="name">
-                <h2><c:out value="${sessionScope.loginMemberInfo.name}"/></h2>
-                <h4><c:out value="${sessionScope.loginMemberInfo.email}"/></h4>
+                <h2>${sessionScope.loginMemberInfo.name}</h2>
+                <h4>${sessionScope.loginMemberInfo.email}</h4>
             </div>
             <button class="heart-button">
                 <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2"
