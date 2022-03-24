@@ -40,7 +40,7 @@
 					</span>
 					<input type="text" id="title1" name=title placeholder="제목"/>
 					<textarea name="text" id="conetent1" cols="50" rows="10" placeholder="설명"></textarea>
-					<input type="button" id="add1" value="책 추가하기"/>
+					<!-- <input type="button" id="add1" value="책 추가하기"/> -->
 					
     			</div>
     		</div>

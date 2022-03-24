@@ -60,7 +60,7 @@
     		</select>
     		<input type="text" id="text1" name="title" placeholder="제목" style="width:80%; font-size:20px; "/><br>
     		<textarea id="textarea1" name="description" cols="50" rows="10" placeholder="설명"></textarea><br>
-    		<input type="button" id="add1" value="추가하기">
+    		<!-- <input type="button" id="add1" value="추가하기"> -->
     	</div>
   </div>
 </main>

@@ -85,7 +85,7 @@ public class FileController {
 //	}
 	
 	@PostMapping("/saveImage")
-	public ModelAndView saveImage(FileDTO dto) {
+	public ModelAndView saveImage(HttpServletResponse response, FileDTO dto) {
 		Map<String, Object> hmap = new HashMap<String, Object>();
 		System.out.println(dto.getImgFile());
 		System.out.println("------saveImage-----------");
@@ -106,6 +106,18 @@ public class FileController {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("result", result);
 		mv.setViewName("reviewphoto");
+		
+		//수행 완료 후 화면이동
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out;
+		try {
+			out = response.getWriter();
+			out.println("<script>alert('성공적으로 업로드하였습니다!');  location.href='/noticeboard';</script>");
+			out.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		return mv;
 	}
 	

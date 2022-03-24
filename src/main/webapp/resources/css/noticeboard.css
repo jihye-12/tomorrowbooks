@@ -71,14 +71,14 @@
 
 /* drop */
 .drop{
-   
+   	margin-left: 100px;
     padding-top: 10px;
     padding-left: 20px;
     width: 400px;
     display: flex;
 }
 .dropdown1{
-    
+       	margin-left: 150px;
     padding-right: 40px;
     padding-top: 10px;
     position: absolute;
@@ -90,9 +90,10 @@
 }
 
 .dropdown2{
+	   	margin-left: 250px;
     padding-right: 20px;
     padding-top: 10px;
-    position: absolute;
+	position: absolute;
     left: 120px;
 }
 
@@ -102,9 +103,10 @@
 }
 
 .dropdown3{
+	   	margin-left: 250px;
     padding-right: 20px;
     padding-top: 10px;
-    position: absolute;
+	position: absolute;
     left: 220px;
 }
 
@@ -194,7 +196,7 @@
     width: 500px;
     text-align: left;
     position: absolute;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .list2:hover{
@@ -207,14 +209,14 @@
     text-align: center;
     width: 80px;
    position: absolute;
-   left:750px;
+   left:995px;
 }
 
 .list4{
     text-align: center;
     width: 130px;
     position: absolute;
-    left:920px;
+    left:1170px;
     transform: translate(-50%, 0%);
 }
 
@@ -222,7 +224,7 @@
     text-align: center;
     width: 130px;
     position: absolute;
-    left:1037px;
+    left:1290px;
     transform: translate(-50%, 0%);
 }
 
@@ -281,4 +283,13 @@
 #postimg{
     width: 50px;
     margin-bottom: 10px;
+}
+
+.post_section {
+	margin-top: 50px;
+	margin-left: 250px;
+}
+
+.photo_section {
+	margin-top: 50px;
 }

@@ -78,6 +78,7 @@
 		</ul>
 	</header>
 
+<section class="post_section">
 	<div id="post">
 		<img id="postimg"
 			src="https://cdn-icons-png.flaticon.com/128/6212/6212423.png">
@@ -120,6 +121,7 @@
 			<li class="page-item"><a class="page-link" href="#">다음</a></li>
 		</ul>
 	</nav>
+</section>
 
 
 

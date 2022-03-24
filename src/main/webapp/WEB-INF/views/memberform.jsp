@@ -83,8 +83,8 @@
 						<input type="text" placeholder="별명(2~15자)" maxlength="15" id="name" name="name">
 
 					</div>
-					<input type="hidden" name="nickChkYn" id="nickChkYn" />
-					<input type="button" id="nick1" value="닉네임 확인">
+					<input type="hidden" name="nickChkYn" id="nameChkYn" />
+					<input type="button" id="nick1" value="닉네임 중복확인">
 					<br>
 					<!-- 약관동의 부분 생략
 					<div id="agr">
@@ -131,7 +131,7 @@
 										$('#emailChkYn').val("Y");
 										$('#email2').attr("readonly", true);
 										$('#select1').attr("readonly", true);
-										$('#email1').css("border", "solid 1px red");
+										$('#email1').css("border", "solid 1px blue");
 										$('#email1').val("이메일 확인완료");
 										$('#email1').attr("readonly", true);
 									}
@@ -158,9 +158,10 @@
 									alert("이미 등록된 닉네임 입니다.");
 								} else {
 									if (confirm("입력한 닉네임을 사용 하시겠습니까?")) {
+										
 										$('#nameChkYn').val("Y");
 										$('#name').attr("readonly", true);
-										$('#nick1').css("border", "solid 1px red");
+										$('#nick1').css("border", "solid 1px blue");
 										$('#nick1').val("닉네임 확인완료");
 										$('#nick1').attr("readonly", true);
 									}
@@ -176,6 +177,7 @@
 
 
 					$('#insert').click(function () {
+						
 						if ($('#email2').val() == '') {
 							alert("이메일을 입력해주세요.");
 							$('#email2').focus();
@@ -194,17 +196,18 @@
 							return false;
 						}
 						
+						if ($('#nameChkYn').val() == "N") {
+							alert("닉네임 중복 검사를 해주세요.");
+							$('#nick1').focus();
+							return false;
+						}
+						
 						if ($('#name').val() == '') {
 							alert("닉네임을 입력해주세요.");
 							$('#name').focus();
 							return false;
 						}
 
-						if ($('#nameChkYn').val() == "N") {
-							alert("닉네임 중복 검사를 해주세요.");
-							$('#nick1').focus();
-							return false;
-						}
 
 						var email = $('#email2').val() + "@" + $('#select1').val();
 						$('#setEmail').val(email);

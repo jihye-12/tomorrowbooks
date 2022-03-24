@@ -26,12 +26,24 @@ public class ReviewController {
 	ReviewService service;
 
 	@PostMapping("/membermybatisinsert")
-	public ModelAndView insertresult(ReviewDTO dto) {
+	public ModelAndView insertresult(HttpServletResponse response, ReviewDTO dto) {
 		//dto.setId(request.getParameter("id")
 		int result = service.insertreview(dto);//id, email, phone �ߺ� �Ұ���
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("result", result);//int
 		mv.setViewName("/reviewwrite");
+		
+		//수행 완료 후 화면이동
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out;
+		try {
+			out = response.getWriter();
+			out.println("<script>alert('성공적으로 업로드하였습니다!');  location.href='/postlist';</script>");
+			out.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+				
 		return mv;
 	}
 	

@@ -78,6 +78,7 @@
         </li>
     </ul>
 
+	<div class="photo_section">
     <!-- dropbox -->
     <div class="drop">
         <div class="dropdown1">
@@ -134,7 +135,7 @@
 		</c:forEach>
 
     </div>
-
+	</div>
 </body>
 
 </html>

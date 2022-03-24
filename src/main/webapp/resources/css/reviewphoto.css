@@ -23,14 +23,14 @@ ul { list-style: none;}
     margin: 1em auto;
     max-width: 1160px;
 }
-/* html {
+html {
  	height: 100%;
-} */
-/* body {
+}
+body {
 	height:100%;
     padding: 0;
     margin: 0;
-} */
+}
 
 header {
     position: fixed;
@@ -115,16 +115,16 @@ header h1 {
     background-color: rgb(0, 200, 200);
 }
 main{
-	margin-top:150px;
+	margin-top:75px;
 	height: 800px;
 	display: flex;
   	justify-content: center;
-  	align-items: center;
+  	align-items: flex-start;
 }
 
 .main-container {
-  width: 600px;
-  /* height: 100%; */
+  width: 900px;
+/*   height: 100%;; */
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -133,6 +133,7 @@ main{
   width: 100%;
   font-size: 40px;
   border: 2px solid #dee3eb;
+  height: 100px;
 }
 
 #box1{
