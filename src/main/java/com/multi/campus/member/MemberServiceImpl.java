@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.multi.campus.dao.MemberDao;
+import com.multi.campus.member.MemberDto;
+import com.multi.campus.member.MemberService;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -17,6 +19,12 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public int insertMember(MemberDto dto) {
 		return memberDao.insertMember(dto);
+	}
+	
+	@Override
+	public MemberDto insertCheck(MemberDto dto) {
+		System.out.println(" insertCheck dto : "+dto.toString());
+		return memberDao.insertCheck(dto);
 	}
 
 }

@@ -110,6 +110,7 @@ h2{
     height:50px;
     margin: 10px 0px 0px;
 }
+
 #pass>h2{
     width:360px;
     height:21px;
@@ -200,7 +201,7 @@ input[type=checkbox]
 /* #check input{
     background-color: aqua;
 } */
-input[type=button]{
+#insert{
     width:400px;
     height: 50px;
     background-color: aqua;
